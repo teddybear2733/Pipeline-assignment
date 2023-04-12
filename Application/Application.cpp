@@ -1,5 +1,5 @@
 // Application.cpp : Defines the exported functions for the DLL.
-//
+// Testing file
 
 #include "framework.h"
 #include "Application.h"
