@@ -74,8 +74,8 @@ jobs:
         name: my-artifact 
         path: ×64\Release
     - name: stage
-      working-directory: ${{env.GITHUB_WORKSPACE} } 
-      run: copy x64\Release\PipeplinesExe.exe
+      working-directory: ${{env.GITHUB_WORKSPACE}} 
+      run: copy x64\Release\PipeplinesExe.exe .
     - name: addEmail 
       working-directory: ${{env GITHUB_WORKSPACE}} 
       run: git config --global user .email "olekaspt@mail.uc.edu"
@@ -83,7 +83,7 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}} 
       run: git config --global user.name "Patrick olelas"
     - name: add
-      working-directory: ${{env .GITHUB WORKSPACE} } 
+      working-directory: ${{env .GITHUB WORKSPACE}} 
       run: git add PipeplinesExe.exe
     - name: Commit 
       working-directory: ${{env GITHUB_WORKSPACE}} 
