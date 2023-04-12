@@ -40,7 +40,7 @@ jobs:
       with:
         name: my-artifact
         path: x64\Release\
-        if-no-files-foudn: error
+        if-no-files-found: error
   lint:
     runs-on: windows-latest
     steps:
@@ -51,15 +51,15 @@ jobs:
     needs: [build, lint] 
     runs-on: windows-latest
     steps:
-    - name: UploadBinaries
-      uses: actions/upload-artifact@v3
-      with:
-        name: my-artifact
-        path: x64\Release\
-        if-no-files-foudn: error
     - name: Setup VSTest.exe
       uses: Malcolmnixon/Setup-VSTest@v4
+    - name: DownloadBinaries
+      uses: actions/download-artifact@v3
+      with:
+        name: my-artifact
+        path: x64\Release
+        if-no-files-found: error
     - name: RunTests
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: VSTest.Console.exe  UnitTest1\UnitTest1.dll
+      run: VSTest.Console.exe  x64\Release\UnitTest1.dll
 
