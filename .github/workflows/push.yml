@@ -62,6 +62,7 @@ jobs:
     - name: RunTests
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: VSTest.Console.exe  x64\Release\UnitTest1.dll
+
   SaveBinary:
     needs: [test]
     runs-on: windows-latest
@@ -81,11 +82,11 @@ jobs:
       
     - name: addEmail
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: git config --global user.email "olekaspt@mail.uc.edu"
+      run: git config --global user.email "armenkrikorian2722@gmail.com"
       
     - name: addName
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: git config --global user.name "Patrick Olelas"
+      run: git config --global user.name "Armen Krikorian"
       
     - name: add
       working-directory: ${{env.GITHUB_WORKSPACE}}
