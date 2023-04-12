@@ -43,8 +43,8 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: echo LINT
   test:
+    needs: build
     runs-on: windows-latest
-    needs: build | lint
       steps:
       - name: RunTest
         working-directory: ${{env.GITHUB_WORKSPACE}}
