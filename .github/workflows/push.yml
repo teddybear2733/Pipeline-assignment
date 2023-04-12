@@ -77,7 +77,7 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}} 
       run: copy x64\Release\PipeplinesExe.exe .
     - name: addEmail 
-      working-directory: ${{env GITHUB_WORKSPACE}} 
+      working-directory: ${{env.GITHUB_WORKSPACE}} 
       run: git config --global user .email "olekaspt@mail.uc.edu"
     - name: addName
       working-directory: ${{env.GITHUB_WORKSPACE}} 
