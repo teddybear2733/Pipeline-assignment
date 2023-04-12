@@ -44,9 +44,9 @@ jobs:
       run: echo LINT
   test:
     runs-on: windows-latest
-    dependsOn: build | lint
+    needs: build | lint
       steps:
-      - name: RunLint
+      - name: RunTest
         working-directory: ${{env.GITHUB_WORKSPACE}}
-        run: echo LINT
+        run: echo TEST
 
