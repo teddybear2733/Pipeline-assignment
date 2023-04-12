@@ -85,7 +85,9 @@ jobs:
     - name: add
       working-directory: ${{env .GITHUB WORKSPACE} } 
       run: git add PipeplinesExe.exe
-    - name: Commit working-directory: ${{env GITHUB_WORKSPACE}} 
+    - name: Commit 
+      working-directory: ${{env GITHUB_WORKSPACE}} 
       run: git commit -m "generated"
-    - name: push working-directory: ${{env .GITHUB_WORKSPACE}} 
+    - name: push 
+      working-directory: ${{env .GITHUB_WORKSPACE}} 
       run: git push
