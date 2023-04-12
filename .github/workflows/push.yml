@@ -44,7 +44,6 @@ jobs:
       run: echo LINT
   test:
     needs: build
-    needs: lint
     runs-on: windows-latest
     steps:
     - name: RunTest
