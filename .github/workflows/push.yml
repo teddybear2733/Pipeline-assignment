@@ -83,7 +83,7 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}} 
       run: git config --global user.name "Patrick olelas"
     - name: add
-      working-directory: ${{env.GITHUB WORKSPACE}} 
+      working-directory: ${{env.GITHUB_WORKSPACE}} 
       run: git add PipeplinesExe.exe
     - name: Commit 
       working-directory: ${{env.GITHUB_WORKSPACE}} 
