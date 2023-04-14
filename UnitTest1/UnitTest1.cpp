@@ -12,9 +12,8 @@ namespace UnitTest1
 		
 		TEST_METHOD(TestMethod1)
 		{
-
 			CoolClass coolClass;
-			Assert::AreEqual(3, coolClass.Calc(1, 2));
+			Assert::AreEqual(3, coolClass.Calc(1, 3));
 		}
 
 		TEST_METHOD(TestMethod2)
