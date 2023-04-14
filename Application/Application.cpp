@@ -17,6 +17,7 @@ int CoolClass::Calc(int a, int b)
     }
     else
     {
+        std::cout << "This is a test" << endl;
         return a + b;
     }
     
