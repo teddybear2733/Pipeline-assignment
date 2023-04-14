@@ -12,7 +12,7 @@ namespace UnitTest1
 		
 		TEST_METHOD(TestMethod1)
 		{
-
+			lmao
 			CoolClass coolClass;
 			Assert::AreEqual(3, coolClass.Calc(1, 2));
 		}
